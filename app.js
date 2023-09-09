@@ -420,3 +420,17 @@ removeItems();
         element.remove();;
     });
   }
+
+
+  // get current location when window is load
+window.addEventListener('load',async ()=>{
+   navigator.geolocation.getCurrentPosition(getLocation,errorTogetlocation);
+})
+
+
+  function getLocation(position){
+     console.log("hello");
+  }
+  function errorTogetlocation(){
+    //alert("Please allow to get the current location");
+  }
